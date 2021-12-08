@@ -8,24 +8,12 @@ import ru.netology.repository.ProductRepository;
 public class ProductManager {
     private ProductRepository repository;
 
-    ProductManager manager = new ProductManager();
-
     public ProductManager(ProductRepository repository) {
         this.repository = repository;
-    }
-    public ProductManager() {
     }
 
     public void add(Product product) {
         repository.save(product);
-    }
-
-    public void getAll() {
-        repository.getAll();
-    }
-
-    public void removeById(int id) {
-        repository.removeById(id);
     }
 
     public Product[] searchBy(String text) {
